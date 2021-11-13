@@ -334,34 +334,32 @@
           </div>
           <div class="collection__seriesTop">
             <div class="collection__advantages">
-              <div class="collection__item1">
-                <div class="collection__image1">
-                  <img
-                    src="../assets/124_636906541255693530Demon_Slayer_Small_RU.webp"
-                    alt=""
-                  />
-                </div>
+              <div class="collection__image1">
+                <img style=""
+                  src="../assets/124_636906541255693530Demon_Slayer_Small_RU.webp"
+                  alt=""
+                />
+              </div>
 
-                <div class="collection__image1">
-                  <img
-                    src="../assets/266_636971768416132314SNK_S1_Small_RU.webp"
-                    alt=""
-                  />
-                </div>
+              <div class="collection__image1">
+                <img
+                  src="../assets/266_636971768416132314SNK_S1_Small_RU.webp"
+                  alt=""
+                />
+              </div>
 
-                <div class="collection__image1">
-                  <img
-                    src="../assets/266_636971803841833624TPN_Small_RU.webp"
-                    alt=""
-                  />
-                </div>
+              <div class="collection__image1">
+                <img
+                  src="../assets/266_636971803841833624TPN_Small_RU.webp"
+                  alt=""
+                />
+              </div>
 
-                <div class="collection__image1">
-                  <img
-                    src="../assets/297_637631439534858179SAO_Small_RU.jpg"
-                    alt=""
-                  />
-                </div>
+              <div class="collection__image1">
+                <img
+                  src="../assets/297_637631439534858179SAO_Small_RU.jpg"
+                  alt=""
+                />
               </div>
             </div>
             <div class="collection__advantages-bottom">
