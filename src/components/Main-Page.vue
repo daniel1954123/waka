@@ -21,9 +21,9 @@
       </div>
     </div>
 
-    <div class="q-pa-md">
+    <div class="main-page__q-pa-md">
       <q-carousel
-        style="height: 276px"
+        style="height: 276px;"
         animated
         v-model="slide"
         navigation
