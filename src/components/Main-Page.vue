@@ -133,7 +133,7 @@
                 <li>
                   <div class="slider__image">
                     <img
-                      :src="anime.image"
+                      :src="getImgUrl(anime.image)"
                       alt="wakanim-image"
                     />
                     <div class="slider__description">
@@ -993,42 +993,42 @@ export default defineComponent({
       animes: {
         popular:[
           {
-            image:'../assets/21_637452035668594122Mushoku-Tensei_Small_RU.jpg',
+            image:'21_637452035668594122Mushoku-Tensei_Small_RU.jpg',
             title:'Реинкарнация безработного',
             description:'2021 -34 серий'
           },
           {
-            image:'../assets/266_636971768416132314SNK_S1_Small_RU.webp',
+            image:'266_636971768416132314SNK_S1_Small_RU.webp',
             title:'Атака Титанов / Attack on Titan',
             description:'2013 -150 серий'
           },
           {
-            image:'../assets/57_637610730095636733CaseStudyofVanitas_small_RU.jpg',
+            image:'57_637610730095636733CaseStudyofVanitas_small_RU.jpg',
             title:'Мемуары Ванитаса',
             description:'2021 -24 серий'
           },
           {
-            image:'../assets/297_637631439534858179SAO_Small_RU.jpg',
+            image:'297_637631439534858179SAO_Small_RU.jpg',
             title:'Мастера Меча Онлайн',
             description:'2012 -98 серий'
           },
           {
-            image:'../assets/124_636906541255693530Demon_Slayer_Small_RU.webp',
+            image:'124_636906541255693530Demon_Slayer_Small_RU.webp',
             title:'Истребитель Демонов / Demon Slayer: Kimetsu no Yaiba',
             description:'2021 -34 серий'
           },
           {
-            image:'../assets/110_637687050481227614MC_Small_RU.webp',
+            image:'110_637687050481227614MC_Small_RU.webp',
             title:'Девочка которая видит это / Mieruko-chan',
             description:'2021 -12 серий'
           },
           {
-            image:'../assets/210_637687629782938190BHP_Small_RU.webp',
+            image:'210_637687629782938190BHP_Small_RU.webp',
             title:'Изгнан из партии героев / Banished from the Heros Party',
             description:'2021 -12 серий'
           },
           {
-            image:'../assets/266_636971806813555727Overlord_II_Small_RU.webp',
+            image:'266_636971806813555727Overlord_II_Small_RU.webp',
             title:'Повелитель / Overlord',
             description:'2015 -39 серий'
           }
@@ -1071,6 +1071,11 @@ export default defineComponent({
       },
     };
   },
+  methods: {
+    getImgUrl: function (imagePath) {
+      return require('../assets/' + imagePath);
+    }
+  }
 });
 </script>
 
