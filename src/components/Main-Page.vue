@@ -23,7 +23,7 @@
 
     <div class="main-page__q-pa-md">
       <q-carousel
-        style="height: 276px;"
+        style="height: 276px"
         animated
         v-model="slide"
         navigation
@@ -129,18 +129,18 @@
           </div>
           <div class="slider__cards">
             <div class="slider__item">
-              <ul v-for="(anime,idx) in animes.popular" :key="idx" class="slider__card">
+              <ul
+                v-for="(anime, idx) in animes.popular"
+                :key="idx"
+                class="slider__card">
                 <li>
-                  <div class="slider__image">
-                    <img
-                      :src="getImgUrl(anime.image)"
-                      alt="wakanim-image"
-                    />
+                  <div @click="viewPage" class="slider__image">
+                      <img :src="getImgUrl(anime.image)" alt="wakanim-image" />
                     <div class="slider__description">
                       <span class="slider__item__title">
-                        <strong>{{anime.title}}</strong>
-                        <br />
-                       {{anime.description}}
+                        <strong>{{ anime.title }}</strong>
+                        <br/>
+                        {{ anime.description }}
                       </span>
                     </div>
                   </div>
@@ -160,200 +160,21 @@
           </div>
           <div class="ongoings__cards">
             <div class="ongoings__item">
-              <ul class="ongoings__card">
+              <ul
+                v-for="(anime, idx) in animes.ongoing"
+                :key="idx" 
+              class="ongoings__card">
                 <li>
                   <div class="ongoings__image">
                     <img
-                      src="../assets/21_637452035668594122Mushoku-Tensei_Small_RU.jpg"
+                      :src="getImgUrl(anime.image)"
                       alt=""
                     />
                     <div class="ongoings__description">
                       <span class="ongoings__item__title">
-                        <strong>Ranking of Kings</strong>
+                        <strong>{{anime.title}}</strong>
                         <br />
-                        Сезон 1 -дубляж , озвучка
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="ongoings__card">
-                <li>
-                  <div class="ongoings__image">
-                    <img
-                      src="../assets/410_637689400324212767PE_Platinum_end.webp"
-                      alt=""
-                    />
-                    <div class="ongoings__description">
-                      <span class="ongoings__item__title">
-                        <strong> Платиновый Исход / Platinum End</strong>
-                        <br />
-                        Сезон 1 -Русская озвучка
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="ongoings__card">
-                <li>
-                  <div class="ongoings__image">
-                    <img
-                      src="../assets/3235_4_DemonSlayer_MT_RU_small.jpg"
-                      alt=""
-                    />
-                    <div class="ongoings__description">
-                      <span class="ongoings__item__title">
-                        <strong> Истребитель Демонов</strong>
-                        <br />
-                        Поезд бесконечный: Русская озвучка
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="ongoings__card">
-                <li>
-                  <div class="ongoings__image">
-                    <img
-                      src="../assets/21_637452035668594122Mushoku-Tensei_Small_RU.jpg"
-                      alt=""
-                    />
-                    <div class="ongoings__description">
-                      <span class="ongoings__item__title">
-                        <strong>Mishoku Tensei</strong>
-                        <br />
-                        Сезон 1 (часть 2): Субтитры
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="ongoings__card">
-                <li>
-                  <div class="ongoings__image">
-                    <img
-                      src="../assets/510_637690378506416294VP_Visual_pr.jpg"
-                      alt=""
-                    />
-                    <div class="ongoings__description">
-                      <span class="ongoings__item__title">
-                        <strong> Визуальнвя тюрьма </strong>
-                        <br />
-                        Сезон 1 : Русская озвучка
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="ongoings__card">
-                <li>
-                  <div class="ongoings__image">
-                    <img
-                      src="../assets/110_637687050481227614MC_Small_RU.webp"
-                      alt=""
-                    />
-                    <div class="ongoings__description">
-                      <span class="ongoings__item__title">
-                        <strong
-                          >Девочка которая видит это / Mieruko-chan</strong
-                        >
-                        <br />
-                        Сезон 1 : Субтитры
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="ongoings__card">
-                <li>
-                  <div class="ongoings__image">
-                    <img
-                      src="../assets/96_637588530794572057OP_One_piece.jpg"
-                      alt=""
-                    />
-                    <div class="ongoings__description">
-                      <span class="ongoings__item__title">
-                        <strong> One-Piece </strong>
-                        <br />
-                        Land Of Wano: Русская озвучка
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="ongoings__card">
-                <li>
-                  <div class="ongoings__image">
-                    <img
-                      src="../assets/266_636971806813555727Overlord_II_Small_RU.webp"
-                      alt=""
-                    />
-                    <div class="ongoings__description">
-                      <span class="ongoings__item__title">
-                        <strong>Повелитель / Overlord</strong>
-                        <br />
-                        Сезон 4: Русская озвучка
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="ongoings__card">
-                <li>
-                  <div class="ongoings__image">
-                    <img
-                      src="../assets/71_637140090934491997Orphen_Small_RU.webp"
-                      alt=""
-                    />
-                    <div class="ongoings__description">
-                      <span class="ongoings__item__title">
-                        <strong>Волшебник Воин Орфен</strong>
-                        <br />
-                        2020: 50 Серий
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="ongoings__card">
-                <li>
-                  <div class="ongoings__image">
-                    <img
-                      src="../assets/210_637687645576241955VDNT_Small_RU.jpg"
-                      alt=""
-                    />
-                    <div class="ongoings__description">
-                      <span class="ongoings__item__title">
-                        <strong>Этот вампир постоянно умирает!</strong>
-                        <br />
-                        Сезон 1: Русская озвучка
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="ongoings__card">
-                <li>
-                  <div class="ongoings__image">
-                    <img
-                      src="../assets/410_637689617503092479KN_Kaginado_o.jpg"
-                      alt=""
-                    />
-                    <div class="ongoings__description">
-                      <span class="ongoings__item__title">
-                        <strong>Kaginadoo</strong>
-                        <br />
-                        Season 1: Rissian voiceover
+                        {{anime.description}}
                       </span>
                     </div>
                   </div>
@@ -488,198 +309,21 @@
           </div>
           <div class="romantic__cards">
             <div class="romantic__item">
-              <ul class="romantic__card">
+              <ul
+                v-for="(anime, idx) in animes.romantic"
+                :key="idx"  
+              class="romantic__card">
                 <li>
                   <div class="romantic__image">
                     <img
-                      src="../assets/266_636971785287141459Fruits-Basket_Small_RU.webp"
+                      :src="getImgUrl(anime.image)"
                       alt=""
                     />
                     <div class="romantic__description">
                       <span class="romantic__item__title">
-                        <strong>Fruits Basket / Корзинка Фруктов</strong>
+                        <strong>{{anime.title}}</strong>
                         <br />
-                        2019 - 126 серий
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="romantic__card">
-                <li>
-                  <div class="romantic__image">
-                    <img
-                      src="../assets/268_637655773528679656Horimiya_Small_RU.webp"
-                      alt=""
-                    />
-                    <div class="romantic__description">
-                      <span class="romantic__item__title">
-                        <strong>Хоримия / Horimiya</strong>
-                        <br />
-                        2021 -26 серий
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="romantic__card">
-                <li>
-                  <div class="romantic__image">
-                    <img
-                      src="../assets/210_637372514932019783Adachi-Shimamura_Small_RU.webp"
-                      alt=""
-                    />
-                    <div class="romantic__description">
-                      <span class="romantic__item__title">
-                        <strong>Адати и Симамура</strong>
-                        <br />
-                        2020 - 24 серий
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="romantic__card">
-                <li>
-                  <div class="romantic__image">
-                    <img
-                      src="../assets/310_637056891452091804Oresuki_Small_RU.jpg"
-                      alt=""
-                    />
-                    <div class="romantic__description">
-                      <span class="romantic__item__title">
-                        <strong>Oresuki Да как можешь меня любить...</strong>
-                        <br />
-                        2019 - 26 серий
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="romantic__card">
-                <li>
-                  <div class="romantic__image">
-                    <img
-                      src="../assets/266_636971786130468367Kaguya_Small_RU.webp"
-                      alt=""
-                    />
-                    <div class="romantic__description">
-                      <span class="romantic__item__title">
-                        <strong>Госпожа Кагуя: в лбви как на войне</strong>
-                        <br />
-                        2019 - 48 серий
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="romantic__card">
-                <li>
-                  <div class="romantic__image">
-                    <img
-                      src="../assets/24_637214145097593930SPZC-2_Small_RU.jpg"
-                      alt=""
-                    />
-                    <div class="romantic__description">
-                      <span class="romantic__item__title">
-                        <strong>Shironeko Project: Нулевая хроника</strong>
-                        <br />
-                        2020 - 24 серий
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="romantic__card">
-                <li>
-                  <div class="romantic__image">
-                    <img
-                      src="../assets/218_637019960226177675YN_Small.webp"
-                      alt=""
-                    />
-                    <div class="romantics__description">
-                      <span class="romantic__item__title">
-                        <strong>Твое имя: Your Name </strong>
-                        <br />
-                        2016 - 2 серии
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="romantic__card">
-                <li>
-                  <div class="romantic__image">
-                    <img
-                      src="../assets/262_637499281341960524BTC_Small_RU.jpg"
-                      alt=""
-                    />
-                    <div class="romantic__description">
-                      <span class="romantic__item__title">
-                        <strong>Низкоуровневый Томодзаки</strong>
-                        <br />
-                        2021 - 28 серий
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="romantic__card">
-                <li>
-                  <div class="romantic__image">
-                    <img
-                      src="../assets/86_637587530131979749TB_Small_RU.jpg"
-                      alt=""
-                    />
-                    <div class="romantic__description">
-                      <span class="romantic__item__title">
-                        <strong>Туалетный Мальчик Ханако</strong>
-                        <br />
-                        2020 - 24 Серий
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="romantic__card">
-                <li>
-                  <div class="romantic__image">
-                    <img
-                      src="../assets/276_636972434611119565WNL_Small_RU.webp"
-                      alt=""
-                    />
-                    <div class="romantic__description">
-                      <span class="romantic__item__title">
-                        <strong>Мы не можем учится!</strong>
-                        <br />
-                        2019 - 52 серии
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="romantic__card">
-                <li>
-                  <div class="romantic__image">
-                    <img
-                      src="../assets/256_636970679099985707Date_A_Live_1_Small_RU.webp"
-                      alt=""
-                    />
-                    <div class="romantic__description">
-                      <span class="romantic__item__title">
-                        <strong>Рандеву с жизнью</strong>
-                        <br />
-                        2013 - 74 серии
+                        {{anime.description}}
                       </span>
                     </div>
                   </div>
@@ -699,126 +343,21 @@
           </div>
           <div class="romantic__cards">
             <div class="romantic__item">
-              <ul class="romantic__card">
+              <ul
+              v-for="(anime, idx) in animes.unexpected"
+                :key="idx"  
+               class="romantic__card">
                 <li>
                   <div class="romantic__image">
                     <img
-                      src="../assets/284_637236908064238590SMH_Small_RU.webp"
+                      :src="getImgUrl(anime.image)"
                       alt=""
                     />
                     <div class="romantic__description">
                       <span class="romantic__item__title">
-                        <strong>Фрагмент Истины</strong>
+                        <strong>anime.title</strong>
                         <br />
-                        2019 - 24 серий
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="romantic__card">
-                <li>
-                  <div class="romantic__image">
-                    <img
-                      src="../assets/266_636971810258146331Fate-Stay-Night-Heavens-Feel_Small_RU.webp"
-                      alt=""
-                    />
-                    <div class="romantic__description">
-                      <span class="romantic__item__title">
-                        <strong>Судьба/Ночь Схватки </strong>
-                        <br />
-                        2017 - 6 серий
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="romantic__card">
-                <li>
-                  <div class="romantic__image">
-                    <img
-                      src="../assets/2310_637074399522132404RUAR_Small_RU.jpg"
-                      alt=""
-                    />
-                    <div class="romantic__description">
-                      <span class="romantic__item__title">
-                        <strong>За дело! Звериная тропа</strong>
-                        <br />
-                        2019 - 24 серий
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="romantic__card">
-                <li>
-                  <div class="romantic__image">
-                    <img
-                      src="../assets/266_636971805856282082Persona_5_The_Animation_Small_RU.webp"
-                      alt=""
-                    />
-                    <div class="romantic__description">
-                      <span class="romantic__item__title">
-                        <strong>Персона 5 Анимация</strong>
-                        <br />
-                        2018 - 56 серий
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="romantic__card">
-                <li>
-                  <div class="romantic__image">
-                    <img
-                      src="../assets/266_637603053220960394TCH_Small_RU.jpg"
-                      alt=""
-                    />
-                    <div class="romantic__description">
-                      <span class="romantic__item__title">
-                        <strong>Осторожный Герой</strong>
-                        <br />
-                        2019 - 24 серий
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="romantic__card">
-                <li>
-                  <div class="romantic__image">
-                    <img
-                      src="../assets/262_637499281341960524BTC_Small_RU.jpg"
-                      alt=""
-                    />
-                    <div class="romantic__description">
-                      <span class="romantic__item__title">
-                        <strong>Сакура собирательница карт</strong>
-                        <br />
-                        2018 - 46 серий
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="romantic__card">
-                <li>
-                  <div class="romantic__image">
-                    <img
-                      src="../assets/127_636985205988438208Okasaan_Small_RU.webp"
-                      alt=""
-                    />
-                    <div class="romantic__description">
-                      <span class="romantic__item__title">
-                        <strong>Ты же любишь мамочку, удары...</strong>
-                        <br />
-                        2019 - 26 Серий
+                        {{anime.description}}
                       </span>
                     </div>
                   </div>
@@ -972,11 +511,6 @@
 
 
 
-<!-- <div class="collection__advantages">
-              <img src="../assets/266_636971806813555727Overlord_II_Small_RU.webp" alt="">
-          </div> -->
-
-
 <script>
 import { defineComponent, ref } from "vue";
 
@@ -991,91 +525,210 @@ export default defineComponent({
   data() {
     return {
       animes: {
-        popular:[
+        popular: [
           {
-            image:'21_637452035668594122Mushoku-Tensei_Small_RU.jpg',
-            title:'Реинкарнация безработного',
-            description:'2021 -34 серий'
+            image: "21_637452035668594122Mushoku-Tensei_Small_RU.jpg",
+            title: "Реинкарнация безработного",
+            description: "2021 -34 серий",
           },
           {
-            image:'266_636971768416132314SNK_S1_Small_RU.webp',
-            title:'Атака Титанов / Attack on Titan',
-            description:'2013 -150 серий'
+            image: "266_636971768416132314SNK_S1_Small_RU.webp",
+            title: "Атака Титанов / Attack on Titan",
+            description: "2013 -150 серий",
           },
           {
-            image:'57_637610730095636733CaseStudyofVanitas_small_RU.jpg',
-            title:'Мемуары Ванитаса',
-            description:'2021 -24 серий'
+            image: "57_637610730095636733CaseStudyofVanitas_small_RU.jpg",
+            title: "Мемуары Ванитаса",
+            description: "2021 -24 серий",
           },
           {
-            image:'297_637631439534858179SAO_Small_RU.jpg',
-            title:'Мастера Меча Онлайн',
-            description:'2012 -98 серий'
+            image: "297_637631439534858179SAO_Small_RU.jpg",
+            title: "Мастера Меча Онлайн",
+            description: "2012 -98 серий",
           },
           {
-            image:'124_636906541255693530Demon_Slayer_Small_RU.webp',
-            title:'Истребитель Демонов / Demon Slayer: Kimetsu no Yaiba',
-            description:'2021 -34 серий'
+            image: "124_636906541255693530Demon_Slayer_Small_RU.webp",
+            title: "Истребитель Демонов / Demon Slayer: Kimetsu no Yaiba",
+            description: "2021 -34 серий",
           },
           {
-            image:'110_637687050481227614MC_Small_RU.webp',
-            title:'Девочка которая видит это / Mieruko-chan',
-            description:'2021 -12 серий'
+            image: "110_637687050481227614MC_Small_RU.webp",
+            title: "Девочка которая видит это / Mieruko-chan",
+            description: "2021 -12 серий",
           },
           {
-            image:'210_637687629782938190BHP_Small_RU.webp',
-            title:'Изгнан из партии героев / Banished from the Heros Party',
-            description:'2021 -12 серий'
+            image: "210_637687629782938190BHP_Small_RU.webp",
+            title: "Изгнан из партии героев / Banished from the Heros Party",
+            description: "2021 -12 серий",
           },
           {
-            image:'266_636971806813555727Overlord_II_Small_RU.webp',
-            title:'Повелитель / Overlord',
-            description:'2015 -39 серий'
+            image: "266_636971806813555727Overlord_II_Small_RU.webp",
+            title: "Повелитель / Overlord",
+            description: "2015 -39 серий",
+          },
+        ],
+        ongoing: [
+          {
+            image: "../assets/21_637452035668594122Mushoku-Tensei_Small_RU.jpg",
+            title: "Ranking of Kings",
+            description: " Сезон 1 -дубляж , озвучка",
+          },
+          {
+            image: "../assets/410_637689400324212767PE_Platinum_end.webp",
+            title: " Платиновый Исход / Platinum End",
+            description: "Сезон 1 -дубляж , озвучка",
+          },
+          {
+            image: "../assets/3235_4_DemonSlayer_MT_RU_small.jpg",
+            title: "Истребитель Демонов",
+            description: "Сезон 1 Русская озвучка",
+          },
+          {
+            image: "../assets/21_637452035668594122Mushoku-Tensei_Small_RU.jpg",
+            title: "Mishoku Tensei",
+            description: "Сезон 1 (часть 2): Субтитры",
+          },
+          {
+            image: "../assets/510_637690378506416294VP_Visual_pr.jpg",
+            title: "Визуальнвя тюрьма",
+            description: "Сезон 1 : Русская озвучка",
+          },
+          {
+            image: "../assets/110_637687050481227614MC_Small_RU.webp",
+            title: "Девочка которая видит это / Mieruko-chan",
+            description: "Сезон 1 : Русская озвучка",
+          },
+          {
+            image: "../assets/96_637588530794572057OP_One_piece.jpg",
+            title: "One Piece",
+            description: "Land Of Wano: Русская озвучка",
+          },
+          {
+            image: "../assets/266_636971806813555727Overlord_II_Small_RU.webp",
+            title: "Повелитель / Overlord",
+            description: "Сезон 4: Русская озвучка",
+          },
+          {
+            image: "../assets/71_637140090934491997Orphen_Small_RU.webp",
+            title: "Волшебник Воин Орфен",
+            description: "2020: 50 Серий",
+          },
+          {
+            image: "../assets/210_637687645576241955VDNT_Small_RU.jpg",
+            title: "Этот вампир постоянно умирает!",
+            description: "Сезон 1: Русская озвучка",
+          },
+          {
+            image: "../assets/410_637689617503092479KN_Kaginado_o.jpg",
+            title: "Kaginadoo",
+            description: "Russian Voiceover",
+          },
+        ],
+        romantic: [
+          {
+            image:'../assets/266_636971785287141459Fruits-Basket_Small_RU.webp',
+            title:'Fruits Basket / Корзинка Фруктов',
+            description:'2019 - 126 серий',
+          },
+          {
+            image:'../assets/268_637655773528679656Horimiya_Small_RU.webp',
+            title:'Хоримия / Horimiya',
+            description:'2021 -26 серий',
+          },
+          {
+            image:'../assets/210_637372514932019783Adachi-Shimamura_Small_RU.webp',
+            title:'Адати и Симамура',
+            description:' 2020 - 24 серий',
+          }, 
+          {
+            image:'../assets/310_637056891452091804Oresuki_Small_RU.jpg',
+            title:'Oresuki Да как можешь меня любить...',
+            description:'2019 - 26 серий',
+          }, 
+          {
+            image:'../assets/266_636971786130468367Kaguya_Small_RU.webp',
+            title:'Госпожа Кагуя: в лбви как на войне',
+            description:' 2019 - 48 серий',
+          }, 
+          {
+            image:'../assets/24_637214145097593930SPZC-2_Small_RU.jpg',
+            title:'Shironeko Project: Нулевая хроника',
+            description:'2020 - 24 серий',
+          }, 
+          {
+            image:'../assets/218_637019960226177675YN_Small.webp',
+            title:'Твое имя: Your Name',
+            description:'2016 - 2 серии',
+          }, 
+          {
+            image:'../assets/262_637499281341960524BTC_Small_RU.jpg',
+            title:'Низкоуровневый Томодзаки',
+            description:'2021 - 28 серий',
+          }, 
+          {
+            image:'../assets/86_637587530131979749TB_Small_RU.jpg',
+            title:'Туалетный Мальчик Ханако',
+            description:'2020 - 24 Серийe',
+          }, 
+          {
+            image:'../assets/276_636972434611119565WNL_Small_RU.webp',
+            title:'Мы не можем учится!',
+            description:' 2019 - 52 серии',
+          }, 
+          {
+            image:'../assets/256_636970679099985707Date_A_Live_1_Small_RU.webp',
+            title:'Рандеву с жизнью',
+            description:'2013 - 74 серии',
           }
-        ],
-        ongoing:[
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ],
-        romantic:[
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ],
-        unexpected:[
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
+          ],
+        unexpected: [
+          {
+            image:'../assets/284_637236908064238590SMH_Small_RU.webp',
+            title:'Фрагмент Истины',
+            description:' 2019 - 24 серий'
+          }, 
+          {
+            image:'../assets/266_636971810258146331Fate-Stay-Night-Heavens-Feel_Small_RU.webp',
+            title:'Судьба/Ночь Схватки',
+            description:' 2017 - 6 серий'
+          }, 
+          {
+            image:'../assets/2310_637074399522132404RUAR_Small_RU.jpg',
+            title:'За дело! Звериная тропа',
+            description:'2019 - 24 серий'
+          }, 
+          {
+            image:'../assets/266_636971805856282082Persona_5_The_Animation_Small_RU.webp',
+            title:'Персона 5 Анимация',
+            description:'2018 - 56 серий'
+          }, 
+          {
+            image:'../assets/266_637603053220960394TCH_Small_RU.jpg',
+            title:'Осторожный Герой',
+            description:'  2019 - 24 серий'
+          }, 
+          {
+            image:'../assets/262_637499281341960524BTC_Small_RU.jpg',
+            title:'Сакура собирательница карт',
+            description:'2018 - 46 серий'
+          }, 
+          {
+            image:'../assets/127_636985205988438208Okasaan_Small_RU.webp',
+            title:'Ты же любишь мамочку, удары...',
+            description:'2019 - 26 Серий'
+          }
+          ],
       },
     };
   },
   methods: {
     getImgUrl: function (imagePath) {
-      return require('../assets/' + imagePath);
+      return require("../assets/" + imagePath);
+    },
+    viewPage() {
+      this.$router.push('/view-page')
     }
-  }
+  },
 });
 </script>
 

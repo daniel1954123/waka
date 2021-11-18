@@ -139,7 +139,7 @@
       <q-carousel-slide name="Rihanna">
         <q-video
           class="absolute-full"
-          src="https://www.youtube.com/embed/kOkQ4T5WO9E"
+          src="//kodik.info/seria/673491/1eead269297e734823a7b49d842a33e7/720p"
         />
       </q-carousel-slide>
 
@@ -156,9 +156,9 @@
         glossy
         v-model="slide"
         :options="[
-          { label: 'Soft Jazz', value: 'soft-jazz' },
-          { label: 'Rihanna', value: 'Rihanna' },
-          { label: 'Ibiza Mix', value: 'ibiza' }
+          { label: 'Anime', value: 'Anime' },
+          { label: 'SAO', value: 'SAO' },
+          { label: 'Anime', value: 'Anime' }
         ]"
       />
     </div>
@@ -337,6 +337,11 @@ import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   name: "View-Page.vue",
+   setup () {
+    return {
+      slide: ref('Rihanna')
+    }
+  }
 });
 </script>
 
